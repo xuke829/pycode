@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文章展示</title>
+</head>
+<body>
+<ul>
+    <h1>用户信息</h1>
+    <table border="1">
+        <tr>
+                <th>id</th>
+                <th>mid</th>
+                <th>name</th>
+                <th>sign</th>
+                <th>level</th>
+        </tr>
+
+    {% for user in user_index %}
+        <a href="?mid={{user.mid}}">
+
+        </a>
+        <a href="?level={{user.level}}">
+
+        </a>
+        <tr>
+                <td align="middle">{{ user.id }}</td>
+                <td align="middle">{{ user.mid }}</td>
+                <td align="middle">{{ user.name }} </td>
+                <td align="middle">{{user.sign}}</td>
+                <td align="middle">{{user.level}}</td>
+        </tr>
+    {% endfor %}
+    </table>
+</ul>
+</body>
+</html>
